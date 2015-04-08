@@ -1,0 +1,12 @@
+
+itemGroup.jeckelrockcrushermod.main.name=JeckelRockCrusherMod
+
+tile.rock_crusher.name=Ore Crusher
+
+item.crushed_iron.name=Crushed Iron Ore
+item.crushed_gold.name=Crushed Gold Ore
+item.crushed_copper.name=Crushed Copper Ore
+item.crushed_tin.name=Crushed Tin Ore
+item.crushed_silver.name=Crushed Silver Ore
+item.crushed_lead.name=Crushed Lead Ore
+item.crushed_uranium.name=Crushed Uranium Ore
