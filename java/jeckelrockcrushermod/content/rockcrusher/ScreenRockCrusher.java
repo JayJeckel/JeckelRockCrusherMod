@@ -7,7 +7,6 @@ import jeckelcorelibrary.api.processes.ITickProcess;
 import jeckelcorelibrary.base.guis.AScreenTileInventory;
 import jeckelrockcrushermod.core.Refs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -17,8 +16,8 @@ public class ScreenRockCrusher extends AScreenTileInventory<TileRockCrusher>
 {
 	public ScreenRockCrusher(EntityPlayer player, TileRockCrusher tile)
 	{
-		super(player, tile, new ContainerRockCrusher(player, tile), tile, 176, 186);
-		this._resource = new ResourceLocation(Refs.ModId, "textures/guis/rock_crusher.png");
+		super(player, tile, new ContainerRockCrusher(player, tile), tile, 176, 203);
+		this.setResourceLocation(Refs.ModId, "rock_crusher.png");
 	}
 
 	private Rectangle rectFuel = new Rectangle(72, 37, 14, 14);
@@ -26,9 +25,6 @@ public class ScreenRockCrusher extends AScreenTileInventory<TileRockCrusher>
 	private Rectangle rectInputConvert0 = new Rectangle(53, 18, 16, 16);
 	private Rectangle rectInputConvert1 = new Rectangle(90, 18, 16, 16);
 	private Rectangle rectOutputTransfer = new Rectangle(109, 19, 22, 15);
-
-	@Override public ResourceLocation getResourceLocation() { return this._resource; }
-	private ResourceLocation _resource;
 
 	@Override protected void onDrawOverlays()
 	{
@@ -58,9 +54,14 @@ public class ScreenRockCrusher extends AScreenTileInventory<TileRockCrusher>
 		}
 	}
 
+	@Override protected void doDrawTitle()
+	{
+		this.drawTextCenter(this.getTitle(), 5);
+	}
+
 	@Override protected void onDrawTexts()
 	{
-		this.drawTextLeft(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 96 + 2);
+		this.drawTextLeft(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 98 + 5);
 	}
 
 	@Override protected void onDrawTooltips(int x, int y)

@@ -12,28 +12,28 @@ public class ContainerRockCrusher extends AContainerTileInventory<TileRockCrushe
 {
 	public ContainerRockCrusher(EntityPlayer player, TileRockCrusher tile)
 	{
-		super(player, tile, tile, 176, 186);
+		super(player, tile, tile, 176, 203);
 
 		int cols, rows;
 
 		// Internal Inventory
 
 		// Process Input Slot
-		this.addSlotToContainer(new SlotDisplay(this._inventory, 0, 71, 18));
+		this.addSlotToContainer(new SlotDisplay(this._inventory, 0, 71, 26));
 		// Process Fuel Slot
-		this.addSlotToContainer(new SlotDisplay(this._inventory, 1, 71, 54));
+		this.addSlotToContainer(new SlotDisplay(this._inventory, 1, 71, 62));
 		// Input Slots
 		cols = 1;
 		rows = 4;
-		this.addInventorySlots(this._inventory, 8, 18, cols, rows, 2, SlotInputRockCrusher.class);
+		this.addInventorySlots(this._inventory, 8, 26, cols, rows, 2, SlotInputRockCrusher.class);
 		// Output Slots
 		cols = 2;
 		rows = 4;
-		this.addInventorySlots(this._inventory, 134, 18, cols, rows, 6, SlotOutput.class);
+		this.addInventorySlots(this._inventory, 134, 26, cols, rows, 6, SlotOutput.class);
 		// Fuel Slots
 		cols = 3;
 		rows = 1;
-		this.addInventorySlots(this._inventory, 53, 72, cols, rows, 14, SlotFuelRockCrusher.class);
+		this.addInventorySlots(this._inventory, 53, 80, cols, rows, 14, SlotFuelRockCrusher.class);
 
 		// Player Inventory
 		this.addPlayerInventorySlots(this._player.inventory, 8, this._height);
