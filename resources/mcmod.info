@@ -5,7 +5,7 @@
 		{
 			"modid": "jeckelrockcrushermod",
 			"name": "JeckelRockCrusherMod",
-			"description": "JeckelRockCrusherMod introduces a machine block that pulverises various ores into a crushed dust that can be smelted into twice as many ingots as the original ore. Unlike other versions, this block is useful in the early game as it runs on solid fuel, instead of electricity. Requires: JeckelCoreLibrary",
+			"description": "JeckelRockCrusherMod introduces a machine block that pulverises various ores into a crushed dust that can be smelted into twice as many ingots as the original ore. Unlike other versions, this block is useful in the early game as it runs on solid fuel, instead of electricity. Requires: JeckelCoreLibrary 0.6.0-beta",
 			"version": "${version}",
 			"mcversion": "${mcversion}",
 			"forgeversion": "${forgeversion}",
